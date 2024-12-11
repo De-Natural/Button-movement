@@ -18,18 +18,19 @@
 form{
     height: 380px;
     width: 280px;
-    border: 1px solid green;
     display: flex;
     flex-direction: column;
     padding: 10px;
-    /* align-items: center; */
+    background-color: azure;
+    box-shadow: 2px 3px 10px rgb(209, 205, 205);
+    border-radius: 8px;
     gap: 10px;
-    /* justify-content: space-around; */
 }
 input{
     height: 30px;
     outline: none;
     text-indent: 10px;
+    background-color: transparent;
 }
 h2{
   margin: 0 auto;
@@ -37,18 +38,26 @@ h2{
 label{
     transform: translateY(10px);
 }
-.move{
+.ball{
     height: 180px;
     width: 100%;
-    border: 1px solid;
+    /* border: 1px solid; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.move {
+    height: 170px;
+    width: 80%;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     overflow: hidden;
-    perspective: 1000px
+    perspective: 1000px;
 }
-button{
+
+button {
     height: 30px;
     width: 120px;
     border: none;
@@ -57,7 +66,13 @@ button{
     cursor: pointer;
     border-radius: 5px;
     position: absolute;
-    /* transform: rotateX(150deg); */
-    transform: translate3d(0, 0, 0);
-    transform-origin: center; 
+    box-shadow: 1px 2px 3px black;
+    transform-origin: center;
+    transition: transform 0.3s ease;
+    box-shadow: 
+    inset 3px 3px 6px rgba(0, 0, 0, 0.5),
+    inset -3px -3px 6px rgba(255, 255, 255, 0.5),
+    5px 7px 5px rgba(0, 0, 0, 0.4);
+    transition: transform 0.5s ease, background-color 0.5s ease, color 0.5s ease;
 }
+/* -2px -2px 5px rgba(0, 0, 0, 0.4) */
